@@ -10,15 +10,15 @@
     <!-- ============================================
          [설정] title, description, OG 태그를 수정하세요
          ============================================ -->
-    <title>이력서 - 홍길동</title>
-    <meta name="theme-color" content="#3a7bd5" />
-    <meta name="description" content="소프트웨어 엔지니어, 홍길동의 이력서입니다." />
+    <title>이력서 - 허재훈</title>
+    <meta name="theme-color" content="#ff5c00" />
+    <meta name="description" content="허재훈의 이력서입니다." />
 
-    <meta property="og:url" content="https://YOUR_USERNAME.github.io/resume" />
+    <meta property="og:url" content="https://derekheo.github.io/resume" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="이력서 - 홍길동" />
+    <meta property="og:title" content="이력서 - 허재훈" />
     <meta property="og:image" content="./resume-cover.png" />
-    <meta property="og:description" content="소프트웨어 엔지니어, 홍길동의 이력서입니다." />
+    <meta property="og:description" content="허재훈의 이력서입니다." />
     <meta property="og:locale" content="ko_KR" />
 
     <!-- Pretendard 폰트 (원본과 동일) -->
@@ -27,7 +27,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
-    <!-- normalize.css CDN (빌드 도구 없이 사용) -->
+    <!-- normalize.css CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -35,8 +35,16 @@
 
     <style>
       /* =============================================
-         원본 main.css 그대로 반영 (빌드 도구 불필요)
-         색상을 바꾸고 싶으면 #3a7bd5, #00d2ff 를 검색/치환하세요.
+         컬러 팔레트 (Braun / Dieter Rams 톤)
+         ─────────────────────────────────────────────
+         배경:    #eae7e2  따뜻한 라이트 워밍 그레이
+         표면:    #f2f0ec  약간 밝은 그레이 (컨테이너)
+         텍스트:  #2c2a27  따뜻한 거의-블랙
+         보조:    #6b6560  따뜻한 미드 그레이
+         포인트:  #ff5c00  비비드 오렌지
+         호버:    #ff7e33  밝은 오렌지
+         구분선:  #d5d1cc  따뜻한 보더 그레이
+         선택:    #ffd0aa  연한 오렌지 (텍스트 선택시)
          ============================================= */
 
       * {
@@ -44,7 +52,8 @@
       }
 
       ::selection {
-        background: #00d2ff;
+        background: #ffd0aa;
+        color: #2c2a27;
       }
 
       html,
@@ -56,7 +65,8 @@
           Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
           "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         letter-spacing: -0.3px;
-        color: #222222;
+        color: #2c2a27;
+        background: #eae7e2;
         padding-bottom: 2rem;
         overflow-x: hidden;
         -webkit-font-smoothing: antialiased;
@@ -70,7 +80,7 @@
         }
       }
 
-      /* 상단 그라데이션 바 */
+      /* 상단 그라데이션 바 — 오렌지 톤 */
       body:before {
         position: fixed;
         z-index: 1;
@@ -79,8 +89,8 @@
         content: "";
         width: 100%;
         height: 10px;
-        background: #00d2ff;
-        background: linear-gradient(to right, #3a7bd5, #00d2ff);
+        background: #ff5c00;
+        background: linear-gradient(to right, #ff5c00, #ff7e33, #ffa726)
       }
 
       section {
@@ -94,12 +104,12 @@
       }
 
       a {
-        color: #3a7bd5;
+        color: #ff5c00;
         transition: color 0.3s ease;
       }
 
       a:hover {
-        color: #00d2ff;
+        color: #ff7e33;
       }
 
       h1 {
@@ -137,7 +147,7 @@
       h5 {
         font-size: 1.3rem;
         margin: 0 0 0.5rem 0;
-        color: #333333;
+        color: #4a4640;
       }
 
       ul {
@@ -157,7 +167,7 @@
         left: 0;
         display: inline-block;
         content: "\2022";
-        color: #3a7bd5;
+        color: #ff5c00;
       }
 
       /* 컨테이너 */
@@ -167,9 +177,9 @@
         margin: auto;
       }
 
-      /* 마침표 포인트 컬러 */
+      /* 마침표 포인트 컬러 — 오렌지 */
       .period-mark {
-        color: #3a7bd5;
+        color: #ff5c00;
       }
 
       /* 인트로 큰 문단 */
@@ -185,11 +195,11 @@
         }
       }
 
-      /* 경력 행 (좌: 회사정보 / 우: 프로젝트) */
+      /* 경력 행 */
       .row {
         display: flex;
         padding: 3rem 0;
-        border-bottom: 1px solid #eeeeee;
+        border-bottom: 1px solid #d5d1cc;
       }
 
       .row-left {
@@ -217,7 +227,7 @@
       /* 기타 경험 / 스킬 블록 */
       .other {
         padding: 3rem 0;
-        border-bottom: 1px solid #eeeeee;
+        border-bottom: 1px solid #d5d1cc;
       }
 
       .role {
@@ -241,11 +251,14 @@
 
       /* 인쇄 스타일 */
       @media print {
+        body {
+          background: #fff;
+        }
         body:before {
           display: none;
         }
         a {
-          color: #222 !important;
+          color: #2c2a27 !important;
         }
       }
     </style>
