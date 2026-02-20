@@ -234,6 +234,35 @@
         border-bottom: 1px solid #b5b0aa;
       }
 
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 2rem 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .skill-group h5 {
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #a8a29e;
+        margin-bottom: 0.6rem;
+      }
+
+      .skill-group ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+
+      .skill-group ul li {
+        font-size: 1rem;
+      }
+
       .role {
         display: block;
       }
@@ -332,48 +361,52 @@
           </div>
           <div class="row-right">
 
-            <!-- 프로젝트 1-1 -->
             <div class="project">
               <h4>
-                프로젝트 이름<span class="period-mark">.</span>
+                군부대원 실시간 갈등관리 역량강화 RAG 봇 기술개발<span class="period-mark">.</span>
               </h4>
               <span class="time">
-                <time datetime="2020-01">YYYY. MM</time> - 현재
+                <time datetime="2025-09">2025. 11</time> -
+                <time datetime="2026-02">2026. 02</time>
               </span>
               <h5>Description<span class="period-mark">.</span></h5>
               <p>
-                <!-- TODO: 프로젝트 설명 -->
-                이 프로젝트에 대한 설명을 작성하세요.
+                ㈜한국갈등관리디지털진흥원 × 건양대 사회복지학과 산학공동 기술개발 과제.<br>
+                군부대원의 갈등관리 역량강화를 목적으로, 실제 군 기관 데이터 기반의 RAG 챗봇을 풀스택으로 개발.
               </p>
               <h5>What did I do<span class="period-mark">.</span></h5>
               <ul>
-                <!-- TODO: 한 일 항목별 작성 -->
-                <li>한 일 1</li>
-                <li>한 일 2</li>
-                <li>한 일 3</li>
+                <li>건양대 군사학과 및 실제 군 기관으로부터 수집한 데이터와 갈등 관리 데이터를 별도의 Vector DB로 구축</li>
+                <li>LangChain을 활용한 RAG 파이프라인 설계 및 구현</li>
+                <li>CoT(Chain-of-Thought)를 적용하여 대화 목적(군 정보 검색 / 갈등 문제 해결)을 분류하고 최적화된 응답 제공</li>
+                <li>갈등 분석 알고리즘을 통한 수치화된 분석 보고서 기능 개발</li>
               </ul>
               <h5>Tech Stack<span class="period-mark">.</span></h5>
-              <p>기술1, 기술2, 기술3</p>
+              <p>Flutter, Firebase, Python, LLM, LangChain, RAG, CoT, Google Cloud</p>
             </div>
 
-            <!-- 프로젝트 1-2 (필요시 .project 복사) -->
             <div class="project">
               <h4>
-                프로젝트 이름 2<span class="period-mark">.</span>
+                K-테스트베드 실증 사업 — 민원 딥러닝 분류모델 성능 개선<span class="period-mark">.</span>
               </h4>
               <span class="time">
-                <time datetime="2020-06">YYYY. MM</time> -
-                <time datetime="2021-12">YYYY. MM</time>
+                <time datetime="2025-08">2025. 08</time> -
+                <time datetime="2025-09">2025. 09</time>
               </span>
               <h5>Description<span class="period-mark">.</span></h5>
-              <p>프로젝트 설명을 작성하세요.</p>
+              <p>
+                인턴 과정 중 참여한 K-테스트베드 실증 사업 (한국수자원공사 논산수도센터).<br>
+                테스트베드 실증을 통한 BERT 기반 딥러닝 분류모델 성능 개선 및 민원 데이터 분석을 통한 민원 대응 해결책 제언.
+              </p>
               <h5>What did I do<span class="period-mark">.</span></h5>
               <ul>
-                <li>한 일 1</li>
-                <li>한 일 2</li>
+                <li>민원 데이터 분석 및 시각화</li>
+                <li>민원 데이터 가공 · 라벨링 후 학습 데이터 구축</li>
+                <li>기개발 BERT 기반 딥러닝 모델 분석</li>
+                <li>추가 데이터를 활용한 딥러닝 모델 재학습으로 분류 성능(ACC) <strong>67% → 69%</strong> 개선</li>
               </ul>
               <h5>Tech Stack<span class="period-mark">.</span></h5>
-              <p>기술1, 기술2</p>
+              <p>Python, BERT, Deep Learning, Pytorch</p>
             </div>
 
           </div>
@@ -393,21 +426,27 @@
 
             <div class="project">
               <h4>
-                프로젝트 이름<span class="period-mark">.</span>
+                파라나 AI — 챗봇 기반 생성형 이미지 생성 서비스<span class="period-mark">.</span>
               </h4>
               <span class="time">
-                <time datetime="2018-01">YYYY. MM</time> -
-                <time datetime="2019-12">YYYY. MM</time>
+                <time datetime="2025-06">2025. 06</time> -
+                <time datetime="2025-08">2025. 08</time>
               </span>
               <h5>Description<span class="period-mark">.</span></h5>
-              <p>프로젝트 설명을 작성하세요.</p>
+              <p>
+                ㈜한국갈등관리디지털진흥원에서 기획 · 개발한 Text-to-Image 기반 멀티 서비스 플랫폼.<br>
+                과거를 회상하며 작성한 글을 이미지로 변환하는 '파라나AI', 어린이집 교사를 위한 '그림동화책 AI',
+                갈등관리 자가 진단 서비스, 공감형 인터뷰 챗봇 등 다양한 서비스를 제공.<br>
+                구글 · 카카오 OAuth 기반 서비스 가입자 <strong>150명 이상</strong> 달성.
+              </p>
               <h5>What did I do<span class="period-mark">.</span></h5>
               <ul>
-                <li>한 일 1</li>
-                <li>한 일 2</li>
+                <li>Flutter 기반 Web-App 풀스택 개발</li>
+                <li>이미지 생성을 위한 로직 및 파이프라인 최적화</li>
+                <li>구글 · 카카오 OAuth 소셜 로그인 구현</li>
               </ul>
               <h5>Tech Stack<span class="period-mark">.</span></h5>
-              <p>기술1, 기술2</p>
+              <p>Flutter, Firebase, JavaScript, LLM, Text-to-Image, Google Cloud</p>
             </div>
 
           </div>
@@ -435,16 +474,19 @@
         <!-- ── 프로젝트 1 ─────────────────────────── -->
         <div class="row">
           <div class="row-left">
-            <h3>프로젝트 이름<span class="period-mark">.</span></h3>
-            <span class="role">역할</span>
+            <h3>What If<span class="period-mark">.</span></h3>
+            <span class="role">팀원 (앱 개발)</span>
             <span class="time">
-              <time datetime="2024-01">YYYY. MM</time> -
-              <time datetime="2024-06">YYYY. MM</time>
+              <time datetime="2025-06">2025. 06</time> -
+              <time datetime="2025-12">2025. 12</time>
             </span>
           </div>
           <div class="row-right">
             <h5>Description<span class="period-mark">.</span></h5>
-            <p>프로젝트 설명을 작성하세요.</p>
+            <p>캡스톤 / ACM CHI (인간 컴퓨터 상호작용 학회) Poster Accept</p>
+            <p><strong>목적</strong> : 생성형 AI를 활용한 스마트폰 중독 개선<br>
+              <strong><u>안드로이드 앱 개발</u></strong> 및 피실험자 대상으로 배포하여 스마트폰 사용량 <strong><u>21%를 감소</u></strong>시키는 연구 결과를 얻었습니다.
+            </p>
             <h5>What did I do<span class="period-mark">.</span></h5>
             <ul>
               <li>한 일 1</li>
@@ -458,47 +500,57 @@
         <!-- ── 프로젝트 2 ─────────────────────────── -->
         <div class="row">
           <div class="row-left">
-            <h3>프로젝트 이름<span class="period-mark">.</span></h3>
-            <span class="role">역할</span>
+            <h3>ListenTree<span class="period-mark">.</span></h3>
+            <span class="role">팀원 (개발 리드)</span>
             <span class="time">
-              <time datetime="2024-01">YYYY. MM</time> -
-              <time datetime="2024-06">YYYY. MM</time>
+              <time datetime="2024-09">2024. 09</time> -
+              <time datetime="2024-12">2024. 12</time>
             </span>
           </div>
           <div class="row-right">
             <h5>Description<span class="period-mark">.</span></h5>
-            <p>프로젝트 설명을 작성하세요.</p>
+            <p>
+              학교 심화프로젝트랩 수업에서 진행한 팀 프로젝트.<br>
+              챗봇을 통해 사용자가 자신의 속마음을 자연스럽게 표현하도록 유도하는 웹 서비스(로컬).
+              정해진 대화 횟수를 채우면 대화를 분할하여 각각 요약(BERT / GPT Summarization)하고,
+              저장된 기록은 도감에 보관되어 다른 사용자들이 열람할 수 있도록 제공.
+            </p>
             <h5>What did I do<span class="period-mark">.</span></h5>
             <ul>
-              <li>한 일 1</li>
-              <li>한 일 2</li>
+              <li>Python Flask 기반 전체 플로우 · 로직 기획 및 구현</li>
+              <li>BERT Summarization / GPT Summarization을 활용한 대화 요약 기능 개발</li>
+              <li>도감(대화 기록 아카이브) 기능 설계 및 구현</li>
             </ul>
             <h5>Tech Stack<span class="period-mark">.</span></h5>
-            <p>기술1, 기술2</p>
-          </div>
+            <p>Python, Flask, LLM, NLP</p>
+            </div>
         </div>
 
         <!-- ── 프로젝트 3 ─────────────────────────── -->
         <div class="row">
           <div class="row-left">
-            <h3>프로젝트 이름<span class="period-mark">.</span></h3>
-            <span class="role">역할</span>
+            <h3>Image Empathize<span class="period-mark">.</span></h3>
+            <span class="role">개인</span>
             <span class="time">
-              <time datetime="2024-01">YYYY. MM</time> -
-              <time datetime="2024-06">YYYY. MM</time>
+              <time datetime="2024-10">2024. 10</time> -
+              <time datetime="2024-12">2024. 12</time>
             </span>
           </div>
           <div class="row-right">
             <h5>Description<span class="period-mark">.</span></h5>
-            <p>프로젝트 설명을 작성하세요.</p>
+            <p>
+              AI 소프트웨어 수업 최종 프로젝트.<br>
+              이미지 속 사물의 특징을 분석하고, 이와 연관된 공감적인 문구를 생성하여 사용자에게 따뜻한 하루를 선물하는 사진 공감 서비스.
+            </p>
             <h5>What did I do<span class="period-mark">.</span></h5>
             <ul>
-              <li>한 일 1</li>
-              <li>한 일 2</li>
+              <li>KoLLaVA, BLIP, ExpansionNet_v2 등 다양한 Image Captioning · Multimodal 모델 비교 실험 후 BLIP 최종 적용</li>
+              <li>Ollama-7b / GPT API를 선택적으로 활용하는 LLM 공감 문구 생성 파이프라인 구현</li>
+              <li>Python Flask · FastAPI 기반 백엔드 개발</li>
             </ul>
             <h5>Tech Stack<span class="period-mark">.</span></h5>
-            <p>기술1, 기술2</p>
-          </div>
+            <p>Python, Flask, FastAPI, LLM, Image Captioning, Image Multimodal</p>
+            </div>
         </div>
 
       </section>
@@ -521,11 +573,22 @@
         <div class="other">
           <h3>Education<span class="period-mark">.</span></h3>
           <ul>
-            <li><strong>충남대학교 인공지능학과 학사</strong> (2024. 03. ~ 2026. 02.) — 3.81 / 4.5 (GPA)
-              <p class="edu-desc">거의 매 학기 프로젝트 과목에 참여하여 팀프로젝트 역량을 강화하였고, 인공지능 및 데이터 과학 수업을 우수하게 수료하였습니다.</p>
+            <li><strong>충남대학교 인공지능학과 학사</strong> (2024. 03. ~ 2026. 02.) — 3.81 / 4.5
+              <p class="edu-desc">매 학기 팀프로젝트 과목에 참여하여 협업 역량을 강화하였고,<br> 인공지능 및 데이터 과학 수업을 우수하게 수료하였습니다.</p>
             </li>
             <li class="muted">청주대학교 인공지능소프트웨어전공 (2019. 03. ~ 2024. 02.) - 3.94 / 4.5 (편입학)</li>
             <li class="muted">충남고등학교 (2016. 03. ~ 2019. 02.)</li>
+          </ul>
+        </div>
+
+        <div class="other">
+          <h3>Other Experience<span class="period-mark">.</span></h3>
+          <ul>
+            <li><span class="muted">2023.</span> CF &amp; NLP 기반 AI 추천 분석 시스템 제작 과정 수료 — 성균관대학교 K-디지털사업단</li>
+            <li><span class="muted">2023.</span> 제 2회 KRX 주식 투자 알고리즘 경진대회 참가</li>
+            <li><span class="muted">2024.</span> NH 투자증권 빅데이터 경진대회 참가</li>
+            <li><span class="muted">2025.</span> LG Aimers 6기 수료 — 난임 환자 대상 임신 성공 여부 예측</li>
+            <li><span class="muted">2025.</span> Toss Next ML Challenge — 광고 클릭 예측(CTR) 모델 개발 경진대회 참가</li>
           </ul>
         </div>
 
@@ -536,15 +599,77 @@
             <li>데이터아키텍처 준전문가(DAsP)</li>
             <li>SQL Developer(SQLD)</li>
             <li>AICE Basic</li>
+            <p></p>
+            <li>Toeic Speaking : 150 (Intermediate High)</li>
+          </ul>
+        </div>
+
+        <div class="other">
+          <h3>Award<span class="period-mark">.</span></h3>
+          <ul>
+            <li>2019 우수창업아이템 경진대회 장려상 / 청주대학교 창업교육센터</li>
+          </ul>
+        </div>
+
+        <div class="other">
+          <h3>ACM CHI<span class="period-mark">.</span></h3>
+          <ul>
+            <li><strong>CHI (인간 컴퓨터 상호작용 학회) Poster Accept</strong></li>
+            <li>
+              <strong>연구 목적</strong> :<br> 
+              생성형 AI를 활용해 사용자 맞춤형 'Counter-factual 시나리오'를 제공하는 앱을 개발하고, 이것이 실제 스마트폰 사용량 감소와 자기조절에 유의미한 영향을 미치는지 검증.
+            </li>
+            <li>
+              <strong>연구 결과</strong> :<br>
+              피실험자 8명을 대상으로 2주간 실험,<br> 사용자 평균 사용량 대비 <strong><u>21% 감소</u></strong>
+            </li>
           </ul>
         </div>
 
         <div class="other">
           <h3>Skills<span class="period-mark">.</span></h3>
-          <ul>
-            <li>스킬 항목을 작성하세요.</li>
-            <li>스킬 항목을 작성하세요.</li>
-          </ul>
+          <div class="skills-grid">
+
+            <div class="skill-group">
+              <h5>Language</h5>
+              <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Dart</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h5>AI / ML</h5>
+              <ul>
+                <li>LLM</li>
+                <li>RAG · LangChain</li>
+                <li>NLP · BERT</li>
+                <li>Image Captioning</li>
+                <li>Text-to-Image</li>
+                <li>CoT</li>
+                <li>Deep Learning</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h5>Backend / Infra</h5>
+              <ul>
+                <li>Flask</li>
+                <li>FastAPI</li>
+                <li>Firebase</li>
+                <li>Google Cloud</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h5>Frontend</h5>
+              <ul>
+                <li>Flutter</li>
+              </ul>
+            </div>
+
+          </div>
         </div>
 
       </section>
