@@ -471,6 +471,35 @@
       <section>
         <h2>Project<span class="period-mark">.</span></h2>
 
+        <!-- ── 프로젝트 0 (AI 취업 어시스턴트) ────── -->
+        <div class="row">
+          <div class="row-left">
+            <h3>AI 취업 어시스턴트<span class="period-mark">.</span></h3>
+            <span class="role">개인</span>
+            <span class="time">
+              <time datetime="2026-02">2026. 02</time> -
+            </span>
+          </div>
+          <div class="row-right">
+            <h5>Description<span class="period-mark">.</span></h5>
+            <p>
+              채용 공고 URL을 입력하면 AI가 공고를 분석하고, 사용자 프로필 기반의 적합도 분석 및 맞춤형 자기소개서를 생성하는 풀스택 웹 서비스.<br>
+              크롬 확장 프로그램을 통해 채용 사이트의 지원서 양식을 자동으로 분석 · 매핑하여 입력하는 Auto-Fill 기능까지 제공.
+            </p>
+            <h5>What did I do<span class="period-mark">.</span></h5>
+            <ul>
+              <li>FastAPI 기반 백엔드 설계 및 구현 (Router → Service → Repository 계층 분리)</li>
+              <li>Claude API를 활용한 공고 파싱, 적합도 분석, 자기소개서 생성 파이프라인 구축</li>
+              <li>Playwright + BeautifulSoup4 기반 채용 공고 크롤러 개발 (정적/동적 페이지 대응)</li>
+              <li>Next.js 16 App Router + shadcn/ui 기반 프론트엔드 개발</li>
+              <li>WXT(Manifest V3) 기반 크롬 확장 프로그램 개발 — DOM 분석 · LLM 필드 매핑 · 순차 Auto-Fill</li>
+              <li>AWS EC2(ARM64) + RDS + ECR + Caddy 기반 인프라 구축 및 GitHub Actions CI/CD 파이프라인 구성</li>
+            </ul>
+            <h5>Tech Stack<span class="period-mark">.</span></h5>
+            <p>Python, FastAPI, Next.js, React, TypeScript, PostgreSQL, SQLAlchemy, LLM, Claude API, Playwright, Docker, AWS (EC2 · RDS · ECR), Caddy, GitHub Actions, WXT</p>
+          </div>
+        </div>
+
         <!-- ── 프로젝트 1 ─────────────────────────── -->
         <div class="row">
           <div class="row-left">
@@ -483,17 +512,22 @@
           </div>
           <div class="row-right">
             <h5>Description<span class="period-mark">.</span></h5>
-            <p>캡스톤 / ACM CHI (인간 컴퓨터 상호작용 학회) Poster Accept</p>
-            <p><strong>목적</strong> : 생성형 AI를 활용한 스마트폰 중독 개선<br>
-              <strong><u>안드로이드 앱 개발</u></strong> 및 피실험자 대상으로 배포하여 스마트폰 사용량 <strong><u>21%를 감소</u></strong>시키는 연구 결과를 얻었습니다.
+            <p>
+              캡스톤 프로젝트 / ACM CHI (인간 컴퓨터 상호작용 학회) Poster Accept.<br>
+              생성형 AI 기반 Counter-factual 시나리오를 제공하여 스마트폰 과사용을 개선하는 <strong><u>안드로이드 앱</u></strong>을 개발하고,
+              피실험자 대상 2주간 실험을 통해 평균 스마트폰 사용량 <strong><u>21% 감소</u></strong>를 검증.
             </p>
             <h5>What did I do<span class="period-mark">.</span></h5>
             <ul>
-              <li>한 일 1</li>
-              <li>한 일 2</li>
+              <li>Flutter 기반 안드로이드 앱 전체 설계 및 개발 (Provider 상태 관리, 다중 화면 라우팅)</li>
+              <li>Android Native MethodChannel을 통한 UsageStats API 연동 — queryEvents 기반 정밀 사용 시간 추적 구현</li>
+              <li>Firebase Cloud Functions(Node.js)로 Claude API 호출 서버 구축 — API Key를 Secret Manager로 관리하여 클라이언트 노출 차단</li>
+              <li>사용자 목표 달성 여부에 따라 상향/하향 Counter-factual 시나리오를 생성하는 LLM 프롬프트 파이프라인 설계</li>
+              <li>Cloud Firestore 기반 사용자 프로필 · 사용 로그 · 연구 데이터 수집 구조 설계</li>
+              <li>Scheduled Cloud Functions를 활용한 Google Sheets 자동 동기화로 연구 데이터 파이프라인 구성</li>
             </ul>
             <h5>Tech Stack<span class="period-mark">.</span></h5>
-            <p>기술1, 기술2</p>
+            <p>Flutter, Kotlin, Firebase (Auth · Firestore · Cloud Functions · Hosting), LLM, Claude API, Provider, Google Cloud Secret Manager</p>
           </div>
         </div>
 
@@ -607,7 +641,8 @@
         <div class="other">
           <h3>Award<span class="period-mark">.</span></h3>
           <ul>
-            <li>2019 우수창업아이템 경진대회 장려상 / 청주대학교 창업교육센터</li>
+            <li>학업우수상 / 충남대학교 인공지능학과장 (2026.)</li>
+            <li>우수창업아이템 경진대회 장려상 / 청주대학교 창업교육센터 (2019.)</li>
           </ul>
         </div>
 
@@ -634,6 +669,7 @@
               <h5>Language</h5>
               <ul>
                 <li>Python</li>
+                <li>TypeScript</li>
                 <li>JavaScript</li>
                 <li>Dart</li>
               </ul>
@@ -655,8 +691,11 @@
             <div class="skill-group">
               <h5>Backend / Infra</h5>
               <ul>
-                <li>Flask</li>
                 <li>FastAPI</li>
+                <li>Flask</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+                <li>AWS (EC2 · RDS · ECR)</li>
                 <li>Firebase</li>
                 <li>Google Cloud</li>
               </ul>
@@ -665,6 +704,7 @@
             <div class="skill-group">
               <h5>Frontend</h5>
               <ul>
+                <li>Next.js · React</li>
                 <li>Flutter</li>
               </ul>
             </div>
