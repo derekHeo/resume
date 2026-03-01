@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>포트폴리오 - 허재훈</title>
+    <meta name="theme-color" content="#ff5c00" />
+    <meta name="description" content="허재훈의 포트폴리오입니다." />
+
+    <meta property="og:url" content="https://derekheo.github.io/resume" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="포트폴리오 - 허재훈" />
+    <meta property="og:image" content="./resume-cover.png" />
+    <meta property="og:description" content="허재훈의 포트폴리오입니다." />
+    <meta property="og:locale" content="ko_KR" />
+
+    <!-- Pretendard 폰트 -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <!-- normalize.css CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+
+    <style>
+      /* =============================================
+         컬러 팔레트 (이력서와 동일 — Braun / Dieter Rams 톤)
+         ============================================= */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      ::selection {
+        background: #ffd0aa;
+        color: #2c2a27;
+      }
+
+      html,
+      body {
+        font-size: 16px;
+        word-break: keep-all;
+        font-family: Pretendard, -apple-system, BlinkMacSystemFont,
+          "Bazier Square", "Noto Sans KR", "Segoe UI", "Apple SD Gothic Neo",
+          Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        letter-spacing: -0.3px;
+        color: #2c2a27;
+        background: #eae7e2;
+        padding-bottom: 2rem;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      @media screen and (max-width: 960px) {
+        html,
+        body {
+          font-size: 14px;
+        }
+      }
+
+      /* 상단 그라데이션 바 */
+      body:before {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 10px;
+        background: #ff5c00;
+        background: linear-gradient(to right, #ff5c00, #ff7e33, #ffa726);
+      }
+
+      section {
+        padding: 0 2rem;
+      }
+
+      p {
+        margin: 0 0 1rem 0;
+        font-size: 1.1rem;
+        line-height: 1.4;
+      }
+
+      a {
+        color: #ff5c00;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #ff7e33;
+      }
+
+      h1 {
+        font-size: 5rem;
+        line-height: 1.1;
+        margin-bottom: 3rem;
+      }
+
+      @media screen and (max-width: 960px) {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+
+      h2 {
+        font-size: 3rem;
+        margin: 4rem 0 2rem 0;
+      }
+
+      h3 {
+        font-size: 2rem;
+        margin: 0 0 1rem 0;
+      }
+
+      h4 {
+        font-size: 2rem;
+        margin: 0 0 1rem 0;
+      }
+
+      @media screen and (max-width: 960px) {
+        h4 {
+          font-size: 1.5rem;
+        }
+      }
+
+      h5 {
+        font-size: 1.3rem;
+        margin: 0 0 0.5rem 0;
+        color: #4a4640;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem 0;
+        font-size: 1.1rem;
+      }
+
+      ul > li {
+        position: relative;
+        padding: 0.2rem 0 0.2rem 1rem;
+      }
+
+      ul > li:before {
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        content: "\2022";
+        color: #ff5c00;
+      }
+
+      /* 컨테이너 */
+      .container {
+        width: 100%;
+        max-width: 50rem;
+        margin: auto;
+      }
+
+      /* 마침표 포인트 컬러 */
+      .period-mark {
+        color: #ff5c00;
+      }
+
+      /* 인트로 큰 문단 */
+      .big-paragraph {
+        font-size: 2rem;
+        line-height: 1.4;
+        font-weight: 500;
+      }
+
+      @media screen and (max-width: 960px) {
+        .big-paragraph {
+          font-size: 1.5rem;
+        }
+      }
+
+      /* Proficiency 섹션 */
+      .proficiency {
+        padding: 2rem 0;
+        border-bottom: 1px solid #b5b0aa;
+      }
+
+      /* ─── 포트폴리오 프로젝트 블록 ─── */
+      .portfolio-item {
+        padding: 3rem 0;
+        border-bottom: 1px solid #b5b0aa;
+      }
+
+      .portfolio-item:last-child {
+        border-bottom: none;
+      }
+
+      .portfolio-header {
+        margin-bottom: 2rem;
+      }
+
+      .portfolio-header h3 {
+        font-size: 1.5rem;
+        margin: 0 0 0.3rem 0;
+      }
+
+      .portfolio-header .portfolio-meta {
+        font-size: 0.95rem;
+        color: #6b6560;
+      }
+
+      .portfolio-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #ff5c00;
+        margin-bottom: 1.5rem;
+        padding: 0.8rem 1rem;
+        border-left: 4px solid #ff5c00;
+        background: #f2f0ec;
+        line-height: 1.5;
+      }
+
+      /* 아키텍처 이미지 영역 */
+      .architecture-section {
+        margin-bottom: 2rem;
+      }
+
+      .architecture-section h5 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #ff5c00;
+        margin-bottom: 0.8rem;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      .architecture-image {
+        width: 100%;
+        border: 2px dashed #b5b0aa;
+        border-radius: 8px;
+        min-height: 280px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #b5b0aa;
+        font-size: 1rem;
+        background: #f2f0ec;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .architecture-image img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: contain;
+      }
+
+      /* 문제 원인 / 해결 과정 / 결과 섹션 */
+      .detail-section {
+        margin-bottom: 1.5rem;
+      }
+
+      .detail-section h5 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #ff5c00;
+        margin-bottom: 0.6rem;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      .detail-section ul > li {
+        padding: 0.3rem 0 0.3rem 1.2rem;
+        line-height: 1.5;
+      }
+
+      /* 서브 리스트 (중첩 리스트) */
+      .detail-section ul ul {
+        margin: 0.2rem 0 0.2rem 0.5rem;
+        font-size: 1rem;
+      }
+
+      .detail-section ul ul > li {
+        padding: 0.15rem 0 0.15rem 1rem;
+        color: #6b6560;
+      }
+
+      .detail-section ul ul > li:before {
+        content: "\25E6";
+        color: #b5b0aa;
+      }
+
+      /* Tech Stack 태그 */
+      .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.5rem;
+      }
+
+      .tech-tags span {
+        font-size: 0.85rem;
+        padding: 0.2rem 0.6rem;
+        border-radius: 4px;
+        background: #f2f0ec;
+        border: 1px solid #b5b0aa;
+        color: #4a4640;
+      }
+
+      .muted {
+        color: #a8a29e;
+      }
+
+      /* ─── 인쇄 스타일 ─── */
+      @page {
+        size: A4;
+        margin: 12mm 14mm;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+          padding-bottom: 0;
+          font-size: 9.5pt;
+        }
+        body:before {
+          display: none;
+        }
+        a {
+          color: #2c2a27 !important;
+          text-decoration: none;
+        }
+
+        h1 { font-size: 2.5rem; margin-top: 0; margin-bottom: 2rem; }
+        h2 { font-size: 1.6rem; margin: 1.5rem 0 0.8rem 0; }
+        h3 { font-size: 1rem; margin: 0 0 0.3rem 0; }
+        h4 { font-size: 1.1rem; margin: 0 0 0.3rem 0; }
+        h5 { font-size: 0.9rem; margin: 0 0 0.2rem 0; }
+        p { font-size: 0.9rem; margin: 0 0 0.4rem 0; line-height: 1.35; }
+        ul { font-size: 0.9rem; margin: 0 0 0.4rem 0; }
+        ul > li { padding: 0.1rem 0 0.1rem 0.8rem; }
+        section { padding: 0 1rem; }
+
+        .big-paragraph { font-size: 1.2rem; line-height: 1.3; }
+        .proficiency { padding: 0.8rem 0; }
+        .portfolio-item { padding: 1.5rem 0; }
+        .portfolio-title { padding: 0.5rem 0.8rem; margin-bottom: 1rem; }
+        .architecture-image { min-height: 180px; }
+        .detail-section { margin-bottom: 0.8rem; }
+        .detail-section ul > li { padding: 0.15rem 0 0.15rem 1rem; }
+
+        .page-break { break-before: page; }
+
+        .container { padding-bottom: 0; margin-bottom: 0; }
+        section:last-child { padding-bottom: 0; margin-bottom: 0; }
+
+        .portfolio-item {
+          break-inside: avoid;
+        }
+
+        h2, h3, h4, h5 {
+          break-after: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- ==========================================
+           [섹션 1] 인트로
+           ========================================== -->
+      <section>
+        <h1>
+          포트폴리오<span class="period-mark">.</span><br />
+        </h1>
+
+      </section>
+
+
+      <!-- ==========================================
+           [섹션 2] Proficiency
+           ========================================== -->
+      <section>
+        <h2>Proficiency<span class="period-mark">.</span></h2>
+        <div class="proficiency">
+          <ul>
+            <li>Python · FastAPI 를 활용하여 백엔드 API 서버 설계 및 구현이 가능합니다.</li>
+            <li>LangChain 기반 RAG 파이프라인 설계 · 구축 경험이 있으며, LLM 프롬프트 엔지니어링이 가능합니다.</li>
+            <li>PyTorch 기반 딥러닝 모델 학습 · 평가 · 개선 경험이 있습니다.</li>
+            <li>Flutter 기반 크로스 플랫폼 앱 풀스택 개발 및 Firebase 서비스 연동이 가능합니다.</li>
+            <li>Docker · AWS · GitHub Actions 환경에서 CI/CD 파이프라인 구성 경험이 있습니다.</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ==========================================
+           [섹션 3] Project Portfolio
+           ========================================== -->
+      <section>
+        <h2>Project<span class="period-mark">.</span></h2>
+
+
+        <!-- ── 프로젝트 1: 군부대원 갈등관리 RAG 챗봇 ── -->
+        <div class="portfolio-item">
+          <div class="portfolio-header">
+            <h3>1. 군부대원 갈등관리 RAG 챗봇<span class="period-mark">.</span></h3>
+            <span class="portfolio-meta">㈜한국갈등관리디지털진흥원 · 건양대 산학공동 과제 · 2025. 11 – 2026. 02</span>
+          </div>
+
+          <div class="portfolio-title">
+            <!-- TODO: 이력서의 '문제 해결 역량' 한 줄을 작성하세요 -->
+            군 기관 데이터 기반 RAG 구축 및 CoT를 적용한 대화 목적 분류 · 최적 응답 제공
+          </div>
+
+          <div class="architecture-section">
+            <h5>전체적인 아키텍처</h5>
+            <div class="architecture-image">
+              <!-- TODO: 아키텍처 이미지를 삽입하세요
+                   예시: <img src="./portfolio/rag-chatbot-arch.png" alt="RAG 챗봇 아키텍처"> -->
+              <span>아키텍처 이미지를 삽입하세요</span>
+              <span style="font-size:0.85rem;">1) 아키텍처 &nbsp; 2) 데이터 플로우 &nbsp; 3) 시퀀스 다이어그램</span>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h5>문제 원인</h5>
+            <ul>
+              <li>군 기관 데이터와 갈등 관리 데이터가 분리되어 있어, 사용자의 대화 목적(군 정보 검색 / 갈등 해결)에 따라 적절한 데이터 소스를 선택해야 하는 구조적 문제</li>
+              <li>Python 기반 RAG 파이프라인의 초기 로딩(Cold Start) 시 응답 지연이 발생하여 챗봇 사용자 경험 저하</li>
+              <li>LLM 응답 생성까지의 전체 파이프라인 속도가 실시간 대화에 적합하지 않은 수준</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>해결 과정</h5>
+            <ul>
+              <li>군 기관 수집 데이터 · 갈등 관리 데이터를 각각 별도 Vector DB로 구축하여 목적별 검색 분리</li>
+              <li>CoT(Chain of Thought)를 적용한 대화 목적 분류 로직 설계 — 군 정보 검색 / 갈등 해결 의도를 판별 후 최적의 Vector DB에서 검색</li>
+              <li>Python(LangChain RAG 파이프라인)과 JavaScript(Firebase Cloud Functions) 기반을 함께 활용하여 Cold Start 문제 해소 시도</li>
+              <li>RAG 파이프라인 단계별 최적화 — 청크 사이즈 조정, 리트리버 파라미터 튜닝 등으로 응답 속도 개선</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>결과</h5>
+            <ul>
+              <li>대화 목적 분류 정확도 향상으로 사용자 질의에 맞는 데이터 소스에서 정확한 응답 제공</li>
+              <li>Cold Start 해소 및 파이프라인 최적화를 통해 대화 응답 속도를 실시간 대화에 적합한 수준으로 개선</li>
+              <li>Python + JS 하이브리드 구조로 서버리스 환경에서의 안정적인 RAG 서비스 운영 기반 마련</li>
+            </ul>
+          </div>
+
+        </div>
+
+
+        <!-- ── 프로젝트 2: 딥러닝 분류모델 성능 개선 ── -->
+        <div class="portfolio-item">
+          <div class="portfolio-header">
+            <h3>2. 딥러닝 분류모델 성능 개선<span class="period-mark">.</span></h3>
+            <span class="portfolio-meta">㈜한국갈등관리디지털진흥원 · 한국수자원공사 논산수도센터 K-테스트베드 실증 사업 · 2025. 08 – 2025. 09</span>
+          </div>
+
+          <div class="portfolio-title">
+            BERT 기반 분류모델(Legacy) 성능 개선, 민원 데이터 분석 · 가공 · 라벨링 후 재학습으로 분류 성능 약 3% 개선
+          </div>
+
+          <div class="architecture-section">
+            <h5>전체적인 아키텍처</h5>
+            <div class="architecture-image">
+              <!-- TODO: 아키텍처 이미지를 삽입하세요
+                   예시: <img src="./portfolio/bert-classification-arch.png" alt="딥러닝 분류모델 아키텍처"> -->
+              <span>아키텍처 이미지를 삽입하세요</span>
+              <span style="font-size:0.85rem;">1) 아키텍처 &nbsp; 2) 데이터 플로우 &nbsp; 3) 시퀀스 다이어그램</span>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h5>문제 원인</h5>
+            <ul>
+              <li>기존 BERT 기반 레거시 분류모델의 코드를 직접 수정할 수 없는 제약 — 모델 구조 변경이 아닌 데이터 관점의 접근 필요</li>
+              <li>민원 데이터의 클래스 불균형 문제로 특정 카테고리의 분류 정확도가 낮음</li>
+              <li>기존 라벨링 데이터의 품질이 일정하지 않아 모델 재학습 시 성능 개선 한계</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>해결 과정</h5>
+            <ul>
+              <li>레거시 모델 코드를 분석 · 해석하여 모델 구조 및 학습 파이프라인 흐름 파악</li>
+              <li>민원 데이터 분석 · 가공 · 라벨링을 통해 학습 데이터 품질 개선</li>
+              <li>클래스 불균형 해소를 위한 오버샘플링 · 언더샘플링 기법 비교 적용</li>
+              <li>오토 라벨링 기법 조사 및 적용하여 라벨링 효율성과 일관성 확보</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>결과</h5>
+            <ul>
+              <li>추가 데이터 구축 및 샘플링 전략 적용을 통해 분류 성능 약 3% 개선</li>
+              <li>레거시 코드 수정 없이 데이터 처리 과정만으로 성능 향상이 가능함을 검증</li>
+              <li>오토 라벨링 파이프라인 구축으로 향후 추가 데이터 확보 시 효율적인 재학습 기반 마련</li>
+            </ul>
+          </div>
+
+        </div>
+
+
+        <!-- ── 프로젝트 3: 파라나 AI ── -->
+        <div class="portfolio-item">
+          <div class="portfolio-header">
+            <h3>3. 파라나 AI — Text-to-Image 서비스 플랫폼<span class="period-mark">.</span></h3>
+            <span class="portfolio-meta">㈜한국갈등관리디지털진흥원 · 2025. 06 – 2025. 08</span>
+          </div>
+
+          <div class="portfolio-title">
+            <!-- TODO: 이력서의 '문제 해결 역량' 한 줄을 작성하세요 -->
+            Flutter 기반 Web-App 풀스택 개발 및 이미지 생성 파이프라인 최적화, OAuth 가입자 150명 이상 달성
+          </div>
+
+          <div class="architecture-section">
+            <h5>전체적인 아키텍처</h5>
+            <div class="architecture-image">
+              <!-- TODO: 아키텍처 이미지를 삽입하세요
+                   예시: <img src="./portfolio/parana-ai-arch.png" alt="파라나 AI 아키텍처"> -->
+              <span>아키텍처 이미지를 삽입하세요</span>
+              <span style="font-size:0.85rem;">1) 아키텍처 &nbsp; 2) 데이터 플로우 &nbsp; 3) 시퀀스 다이어그램</span>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h5>문제 원인</h5>
+            <ul>
+              <li>Text-to-Image API 호출 시 이미지 생성 대기 시간이 길어 사용자 이탈 발생</li>
+              <li>OpenAI 이미지 생성 API의 동시 요청 수 및 최대 생성 갯수 제한 정책으로 다수 사용자 동시 요청 처리 불가</li>
+              <li>이미지 생성 요청이 몰리는 시점에 API Rate Limit 초과로 에러 발생 빈번</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>해결 과정</h5>
+            <ul>
+              <li>GCP 기반 Queuing(메시지 큐) 기법을 도입하여 이미지 생성 요청을 순차적으로 처리 — API Rate Limit 초과 문제 해소</li>
+              <li>이미지 생성 파이프라인 최적화 — 요청 전처리 · 프롬프트 정제 · 결과 캐싱 등으로 불필요한 API 호출 감소</li>
+              <li>사용자 대기 시간 동안 프로그레스 UI 및 생성 상태 알림 제공으로 이탈률 감소</li>
+              <li>구글 · 카카오 OAuth 소셜 로그인 구현으로 가입 허들을 낮추어 사용자 유입 확대</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>결과</h5>
+            <ul>
+              <li>Queuing 도입으로 동시 다수 요청 환경에서도 안정적인 이미지 생성 서비스 운영</li>
+              <li>이미지 생성 파이프라인 최적화를 통해 생성 속도 향상</li>
+              <li>OAuth 기반 가입자 150명 이상 달성</li>
+            </ul>
+          </div>
+
+        </div>
+
+
+        <!-- ── 프로젝트 4: AI 취업 어시스턴트 ── -->
+        <div class="portfolio-item">
+          <div class="portfolio-header">
+            <h3>4. AI 취업 어시스턴트<span class="period-mark">.</span></h3>
+            <span class="portfolio-meta">개인 프로젝트 · 2026. 01 –</span>
+          </div>
+
+          <div class="portfolio-title">
+            채용 공고 URL 입력 시 AI 적합도 분석 · 맞춤 자기소개서 생성 · 크롬 확장 Auto-Fill 웹 서비스
+          </div>
+
+          <div class="architecture-section">
+            <h5>전체적인 아키텍처</h5>
+            <div class="architecture-image">
+              <!-- TODO: 아키텍처 이미지를 삽입하세요
+                   예시: <img src="./portfolio/job-assistant-arch.png" alt="AI 취업 어시스턴트 아키텍처"> -->
+              <span>아키텍처 이미지를 삽입하세요</span>
+              <span style="font-size:0.85rem;">1) 아키텍처 &nbsp; 2) 데이터 플로우 &nbsp; 3) 시퀀스 다이어그램</span>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h5>문제 원인</h5>
+            <ul>
+              <li>채용 공고 사이트마다 HTML 구조가 상이하여 정적/동적 페이지 모두 대응하는 범용 크롤러 필요</li>
+              <li>채용 공고 파싱 → 적합도 분석 → 자기소개서 생성까지의 LLM 파이프라인 설계 복잡도</li>
+              <li>크롬 확장 프로그램에서 다양한 지원서 양식의 DOM 구조를 분석하고 필드를 자동 매핑하는 로직 필요</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>해결 과정</h5>
+            <ul>
+              <li>FastAPI 백엔드를 Router → Service → Repository 계층 분리 구조로 설계</li>
+              <li>Playwright + BeautifulSoup4 기반 채용 공고 크롤러 개발 — 정적/동적 페이지 모두 대응</li>
+              <li>Claude API 기반 공고 파싱 · 적합도 분석 · 자기소개서 생성 파이프라인 구축</li>
+              <li>WXT(Manifest V3) 크롬 확장 프로그램 — LLM 기반 DOM 분석 · 필드 매핑 · Auto-Fill 구현</li>
+              <li>AWS EC2 + RDS + ECR + Caddy 인프라 및 GitHub Actions CI/CD 구성</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>결과</h5>
+            <ul>
+              <li>채용 공고 URL 입력만으로 적합도 분석부터 자기소개서 생성까지 자동화된 워크플로우 완성</li>
+              <li>크롬 확장으로 지원서 Auto-Fill 기능 제공 — 지원 과정 시간 단축</li>
+              <li>계층 분리 아키텍처와 CI/CD 파이프라인 구축으로 유지보수성 및 배포 안정성 확보</li>
+            </ul>
+          </div>
+
+        </div>
+
+
+        <!-- ── 프로젝트 5: What If (ACM CHI) ── -->
+        <div class="portfolio-item">
+          <div class="portfolio-header">
+            <h3>5. What If — 스마트폰 과사용 개선 앱<span class="period-mark">.</span></h3>
+            <span class="portfolio-meta">캡스톤 / ACM CHI Poster Accept · 팀장 (개발 리드) · 2025. 06 – 2025. 12</span>
+          </div>
+
+          <div class="portfolio-title">
+            생성형 AI Counter-factual 시나리오를 활용하여 스마트폰 과사용 개선, 2주간 실험 결과 사용량 21% 감소 검증
+          </div>
+
+          <div class="architecture-section">
+            <h5>전체적인 아키텍처</h5>
+            <div class="architecture-image">
+              <!-- TODO: 아키텍처 이미지를 삽입하세요
+                   예시: <img src="./portfolio/whatif-arch.png" alt="What If 아키텍처"> -->
+              <span>아키텍처 이미지를 삽입하세요</span>
+              <span style="font-size:0.85rem;">1) 아키텍처 &nbsp; 2) 데이터 플로우 &nbsp; 3) 시퀀스 다이어그램</span>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h5>문제 원인</h5>
+            <ul>
+              <li>안드로이드 앱 배포 과정에서 빌드 · 서명 · 스토어 정책 등 다양한 허들 발생</li>
+              <li>Android UsageStats API에서 특정 조건에서 잘못된 사용 시간 값을 반환하는 문제 발견</li>
+              <li>Android 버전별로 UsageStats API 동작이 상이하여 특정 OS 버전에서 데이터 수집 오류 발생</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>해결 과정</h5>
+            <ul>
+              <li>Flutter 기반 안드로이드 앱 전체 설계 · 개발 (Provider 상태 관리)</li>
+              <li>Android MethodChannel을 통해 네이티브 UsageStats API 연동 — 잘못된 값 반환 케이스를 분석하여 보정 로직 적용</li>
+              <li>특정 앱 버전별로 발생하는 문제에 로버스트하게 대응하기 위한 버전 분기 처리 및 폴백(fallback) 로직 구현</li>
+              <li>Firebase Cloud Functions + Claude API 서버 구축 (Secret Manager 키 관리), 상향/하향 Counter-factual 시나리오 생성 프롬프트 파이프라인 설계</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>결과</h5>
+            <ul>
+              <li>다양한 Android 버전 환경에서 안정적으로 사용 시간을 정밀 추적하는 앱 완성</li>
+              <li>피실험자 8명 대상 2주간 실험 결과 스마트폰 사용량 21% 감소 검증</li>
+              <li>ACM CHI Poster Accept 성과 달성</li>
+            </ul>
+          </div>
+
+        </div>
+
+
+        <!-- ── 프로젝트 6: ListenTree ── -->
+        <div class="portfolio-item">
+          <div class="portfolio-header">
+            <h3>6. ListenTree — 대화 요약 웹앱<span class="period-mark">.</span></h3>
+            <span class="portfolio-meta">팀원 (개발 리드) · 2024. 09 – 2024. 12</span>
+          </div>
+
+          <div class="portfolio-title">
+            나무 모양 챗봇 UI와의 대화로 속마음 표현을 유도하고, BERT/GPT로 대화를 요약하여 도감에 보관하는 웹앱 서비스
+          </div>
+
+          <div class="architecture-section">
+            <h5>전체적인 아키텍처</h5>
+            <div class="architecture-image">
+              <!-- TODO: 아키텍처 이미지를 삽입하세요
+                   예시: <img src="./portfolio/listentree-arch.png" alt="ListenTree 아키텍처"> -->
+              <span>아키텍처 이미지를 삽입하세요</span>
+              <span style="font-size:0.85rem;">1) 아키텍처 &nbsp; 2) 데이터 플로우 &nbsp; 3) 시퀀스 다이어그램</span>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h5>문제 원인</h5>
+            <ul>
+              <li>대화 요약 시 단일 모델만으로는 감정 키워드 추출과 전체 맥락 요약을 동시에 만족시키기 어려움 — 역할을 분리할 필요</li>
+              <li>Hugging Face pipeline 기반 BERT 요약 모델의 추론 속도가 느려 실시간 대화 후 즉시 요약 제공이 어려움</li>
+              <li>긴 대화 내용이 모델의 입력 토큰 제한을 초과하는 경우 요약 품질 저하</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>해결 과정</h5>
+            <ul>
+              <li>BERT로 핵심 감정 키워드 · 주제를 추출하고, GPT로 전체 대화 맥락을 자연어 요약하는 2단계 요약 파이프라인 설계 — 각 모델의 강점을 역할 분리하여 활용</li>
+              <li>Hugging Face pipeline의 느린 추론 속도를 해소하기 위해 모델 로딩 최적화 및 배치 처리 적용</li>
+              <li>긴 대화 입력 시 청크 분할 후 단계적 요약을 수행하여 토큰 제한 문제 해소</li>
+              <li>Python Flask 기반 전체 플로우 · 로직 기획 및 구현</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>결과</h5>
+            <ul>
+              <li>BERT + GPT 2단계 요약으로 감정 키워드와 맥락 요약을 모두 포함한 고품질 요약 결과 제공</li>
+              <li>추론 속도 최적화를 통해 대화 종료 후 빠른 요약 생성이 가능한 수준으로 개선</li>
+              <li>요약된 대화를 도감에 보관하는 UX로 사용자의 지속적인 자기 표현 유도</li>
+            </ul>
+          </div>
+
+        </div>
+
+
+        <!-- ── 프로젝트 7: Image Empathize ── -->
+        <div class="portfolio-item">
+          <div class="portfolio-header">
+            <h3>7. Image Empathize — 사진 공감 서비스<span class="period-mark">.</span></h3>
+            <span class="portfolio-meta">개인 프로젝트 · 2024. 10 – 2024. 12</span>
+          </div>
+
+          <div class="portfolio-title">
+            이미지 속 사물을 분석하고 공감 문구를 생성하는 서비스, Image Captioning 모델 비교 후 BLIP 적용
+          </div>
+
+          <div class="architecture-section">
+            <h5>전체적인 아키텍처</h5>
+            <div class="architecture-image">
+              <!-- TODO: 아키텍처 이미지를 삽입하세요
+                   예시: <img src="./portfolio/image-empathize-arch.png" alt="Image Empathize 아키텍처"> -->
+              <span>아키텍처 이미지를 삽입하세요</span>
+              <span style="font-size:0.85rem;">1) 아키텍처 &nbsp; 2) 데이터 플로우 &nbsp; 3) 시퀀스 다이어그램</span>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h5>문제 원인</h5>
+            <ul>
+              <li>다양한 Image Captioning 모델(KoLLaVA, BLIP, ExpansionNet_v2 등)이 존재하나, 한국어 이미지 설명 품질과 추론 속도 면에서 적합한 모델 선정이 필요</li>
+              <li>모델 추론 결과를 실시간으로 API 응답으로 반환해야 하므로, 동기식 처리 시 응답 지연 문제</li>
+              <li>이미지 캡셔닝 결과를 기반으로 자연스러운 공감 문구를 생성하기 위한 LLM 연동 파이프라인 필요</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>해결 과정</h5>
+            <ul>
+              <li>KoLLaVA, BLIP, ExpansionNet_v2 등 복수의 Image Captioning 모델을 동일 데이터셋으로 비교 평가 — 캡셔닝 품질 · 추론 속도 · 한국어 지원 여부를 기준으로 BLIP 모델 최종 선정</li>
+              <li>FastAPI를 활용하여 비동기 API 서버 구성 — 이미지 업로드 → 캡셔닝 → LLM 공감 문구 생성까지의 파이프라인을 비동기로 처리하여 응답 속도 확보</li>
+              <li>Ollama-7b / GPT API 기반 LLM 공감 문구 생성 파이프라인 구현 — 캡셔닝 결과를 프롬프트에 주입하여 자연스러운 공감 문구 생성</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h5>결과</h5>
+            <ul>
+              <li>체계적인 모델 비교 과정을 통해 프로젝트 요구사항에 최적화된 BLIP 모델 선정 및 적용</li>
+              <li>FastAPI 비동기 처리로 이미지 분석부터 공감 문구 생성까지 빠른 응답 속도 달성</li>
+              <li>이미지 캡셔닝 + LLM 공감 문구 생성의 end-to-end 파이프라인 완성</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+  </body>
+</html>
