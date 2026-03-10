@@ -461,7 +461,7 @@
 
   <body>
     <img src="./당근.png" alt="당근" class="company-logo"
-         style="display:none; position:fixed; top:1mm; right:1mm; width:48px; height:auto; z-index:10;">
+         style="display:none; position:absolute; top:1mm; right:1mm; width:48px; height:auto; z-index:10;">
     <div class="container">
 
       <!-- ==========================================
@@ -637,13 +637,12 @@
               </span>
               <h5>Description<span class="period-mark">.</span></h5>
               <p>
-                건양대 산학공동 과제. 군 기관 데이터 기반 RAG 구축 및 챗봇 풀스택 개발.
+                산학공동 기술개발 과제(w. 건양대학교).<br> 군 기관 · 갈등 관리 데이터를 별도 Vector DB로 구축하고, LangChain 기반 RAG 파이프라인 및 Flutter 챗봇 풀스택 개발.
               </p>
               <h5>What did I do<span class="period-mark">.</span></h5>
               <ul>
-                <li>군 기관 수집 데이터 · 갈등 관리 데이터를 별도 Vector DB로 구축</li>
-                <li>LangChain 기반 RAG 파이프라인 설계 및 구현</li>
-                <li>CoT를 적용한 대화 목적 분류(군 정보 검색 / 갈등 해결) 및 최적 응답 제공</li>
+                <li>CoT를 적용해 대화 목적(군 / 일상 해결)을 분류하여 최적 응답 제공</li>
+                <li>GCP Functions의 Cold Start로 인해 평균 10초로 사용성이 낮아, Python 단일 구조를 JS 혼합 구조로 전환하여 5초로 단축. Warm Start 기준 평균 3초 달성</li>
               </ul>
               <h5>Tech Stack<span class="period-mark">.</span></h5>
               <p>Flutter, Firebase, Python, LLM, LangChain, RAG, CoT, Google Cloud</p>
@@ -651,45 +650,45 @@
 
             <div class="project">
               <h4>
-                딥러닝 분류모델 성능 개선<span class="period-mark">.</span>
+                파라나 AI<br> — Text-2-Img 서비스 플랫폼<span class="period-mark">.</span>
               </h4>
               <span class="time">
-                <time datetime="2025-08">2025. 08</time> -
-                <time datetime="2025-09">2025. 09</time>
+                <time datetime="2025-06">2025. 08</time> -
+                <time datetime="2025-08">2025. 11</time>
               </span>
               <h5>Description<span class="period-mark">.</span></h5>
               <p>
-                한국수자원공사 논산수도센터 K-테스트베드 실증 사업.<br> BERT 기반 분류모델(Legacy) 성능 개선.
+                AI 사용을 어려워하는 시니어들을 위해 질문-답변-공감 형태의 챗봇 구조를 구축.<br> 회상·회고 글을 이미지로 변환하는 '파라나AI' 등 다양한 생성형 AI 서비스 플랫폼.
+                Flutter 기반 Web-App 풀스택 기획·개발
               </p>
               <h5>What did I do<span class="period-mark">.</span></h5>
               <ul>
-                <li>민원 데이터 분석 · 가공 · 라벨링 후 학습 데이터 구축</li>
-                <li>추가 데이터 기반 모델 재학습으로 분류 성능 <strong>약 3%</strong> 개선</li>
+                <li>이미지 생성 요청의 응답 지연이 사용자 이탈로 이어지는 문제를 파악하고, 생성 파이프라인을 최적화하여 가입자 <strong>200명 이상</strong> 달성</li>
+                <li>고령 사용자가 구글 로그인에 불편을 겪는 문제를 파악하고, 카카오 OAuth를 추가 연동하여 가입 진입 장벽 해소</li>
               </ul>
               <h5>Tech Stack<span class="period-mark">.</span></h5>
-              <p>Python, BERT, Deep Learning, Pytorch</p>
+              <p>Flutter, Firebase, JavaScript, LLM, Text-to-Image, GCP</p>
             </div>
 
             <div class="project">
               <h4>
-                파라나 AI<br> — Text-to-Image 서비스 플랫폼<span class="period-mark">.</span>
+                딥러닝 분류모델 성능 개선<span class="period-mark">.</span>
               </h4>
               <span class="time">
-                <time datetime="2025-06">2025. 06</time> -
-                <time datetime="2025-08">2025. 08</time>
+                <time datetime="2025-08">2025. 07</time> -
+                <time datetime="2025-09">2025. 09</time>
               </span>
               <h5>Description<span class="period-mark">.</span></h5>
               <p>
-                글을 이미지로 변환하는 '파라나AI', 그림동화책 AI 등 다양한 생성형 AI 서비스 플랫폼.
-                OAuth 기반 가입자 <strong>200명 이상</strong> 달성.
+                한국수자원공사 논산수도센터와 진행한 K-테스트베드 실증 사업.
+                <br> 5년간 민원 데이터 분석 · 가공 · 라벨링 후 학습 데이터 구축.
               </p>
               <h5>What did I do<span class="period-mark">.</span></h5>
               <ul>
-                <li>Flutter 기반 Web-App 풀스택 개발 및 이미지 생성 파이프라인 최적화</li>
-                <li>구글 · 카카오 OAuth 소셜 로그인 구현</li>
+                <li>기존 BERT 기반 분류모델이 특정 카테고리에서 오분류가 빈번한 문제가 있어, 추가 데이터 기반 재학습을 통해 분류 성능 <strong>약 3%</strong> 개선</li>
               </ul>
               <h5>Tech Stack<span class="period-mark">.</span></h5>
-              <p>Flutter, Firebase, JavaScript, LLM, Text-to-Image, Google Cloud</p>
+              <p>Python, BERT, Deep Learning, Pytorch</p>
             </div>
 
           </div>
@@ -727,15 +726,13 @@
           <div class="row-right">
             <h5>Description<span class="period-mark">.</span></h5>
             <p>
-              Toss 주최 · DACON 주관 CTR 예측 대회. 토스 앱 실제 광고 노출/클릭 로그(1,070만 건, 익명화 피처 118개) 기반으로 사용자 행동 시퀀스와 광고 피처를 결합하여 클릭 확률을 예측하는 CTR 모델 개발. 평가 지표: AP(50%) + Weighted LogLoss(50%).
+              Toss 주최 · DACON 주관 CTR 예측 대회. 토스 앱 실제 광고 노출/클릭 로그(1,070만 건, 익명화 피처 118개) 기반 CTR 모델 개발. 평가 지표: AP(50%) + Weighted LogLoss(50%).
             </p>
             <h5>What did I do<span class="period-mark">.</span></h5>
             <ul>
-              <li>클릭률 약 2%의 극심한 클래스 불균형에 대해 다운샘플링(1:2) + pos_weight 보정 전략 적용</li>
-              <li>히스토리 피처 간 높은 상관관계를 확인하고, PCA 차원 축소로 37개 피처를 압축 후 비율·차이·상호작용 파생 피처 생성</li>
-              <li>LightGBM feature importance 기반 상위 70개 피처 선택으로 노이즈 피처 제거</li>
-              <li>시퀀스의 순서 정보 보존을 위해 정형 피처(BatchNorm → MLP)와 가변 길이 시퀀스(Bidirectional GRU)를 결합한 하이브리드 모델 설계</li>
-              <li>실시간 서빙 요건을 고려하여 LSTM 대비 경량화된 GRU 기반 아키텍처 선택</li>
+              <li>클릭률 약 2%의 극심한 클래스 불균형에 대해 다운샘플링(1:2) + pos_weight 보정으로 학습 안정성 확보</li>
+              <li>히스토리 피처 간 높은 상관관계를 확인하여 PCA로 37개 피처를 압축하고, LightGBM feature importance 기반 상위 70개 피처 선택으로 노이즈 제거</li>
+              <li>사용자 행동 시퀀스의 순서 정보 보존을 위해 정형 피처(BN+MLP)와 가변 길이 시퀀스(Bidirectional GRU)를 결합한 하이브리드 모델 설계. 실시간 서빙 요건을 고려하여 LSTM 대비 경량화된 GRU 선택</li>
             </ul>
             <h5>Tech Stack<span class="period-mark">.</span></h5>
             <p>Python, PyTorch, LightGBM, scikit-learn, Pandas</p>
@@ -755,14 +752,12 @@
             <h5>Description<span class="period-mark">.</span></h5>
             <p>
               채용 공고 URL 입력 시 AI가 적합도 분석 · 맞춤 자기소개서를 생성하고, 크롬 확장으로 지원서 Auto-Fill까지 제공하는 웹 서비스.
+              FastAPI 백엔드(Router → Service → Repository 계층 분리), Playwright 크롤러, WXT 크롬 확장, AWS 인프라 및 GitHub Actions CI/CD 구성.
             </p>
             <h5>What did I do<span class="period-mark">.</span></h5>
             <ul>
-              <li>FastAPI 백엔드 설계 (Router → Service → Repository 계층 분리)</li>
-              <li>Claude API 기반 공고 파싱 · 적합도 분석 · 자기소개서 생성 파이프라인 구축</li>
-              <li>Playwright + BS4 기반 채용 공고 크롤러 개발 (정적/동적 페이지 대응)</li>
-              <li>WXT(Manifest V3) 크롬 확장 프로그램 — DOM 분석 · LLM 필드 매핑 · Auto-Fill</li>
-              <li>AWS EC2 + RDS + ECR + Caddy 인프라 및 GitHub Actions CI/CD 구성</li>
+              <li>채용 사이트마다 양식이 달라 공고 파싱이 어려운 문제에 대해, Playwright + BS4로 정적/동적 페이지에 모두 대응하는 크롤러 개발</li>
+              <li>Claude API 기반 공고 파싱 · 적합도 분석 · 자기소개서 생성 파이프라인을 구축하고, 크롬 확장에서 DOM 분석 · LLM 필드 매핑으로 Auto-Fill 구현</li>
             </ul>
             <h5>Tech Stack<span class="period-mark">.</span></h5>
             <p>Python, FastAPI, Next.js, TypeScript, PostgreSQL, LLM, Claude API, Playwright, Docker, AWS, GitHub Actions, WXT</p>
@@ -782,14 +777,13 @@
           <div class="row-right">
             <h5>Description<span class="period-mark">.</span></h5>
             <p>
-              <strong>캡스톤 / ACM CHI</strong>. 생성형 AI Counter-factual 시나리오를 활용하여 스마트폰 과사용을 개선하는 앱 개발.<br>피실험자 8명 대상 2주간 대조군/실험군 비교 실험을 설계하고, 사용량 <strong>21% 감소</strong>를 도출.
+              <strong>캡스톤 / ACM CHI</strong>. 생성형 AI Counter-factual 시나리오를 활용하여 스마트폰 과사용을 개선하는 앱.
+              Flutter 기반 안드로이드 앱 전체 설계 · 개발, Firebase Cloud Functions + Claude API 서버 구축.
             </p>
             <h5>What did I do<span class="period-mark">.</span></h5>
             <ul>
-              <li>Flutter 기반 안드로이드 앱 전체 설계 · 개발 (Provider 상태 관리)</li>
-              <li>Android MethodChannel 통한 UsageStats API 연동 — 정밀 사용 시간 추적</li>
-              <li>Firebase Cloud Functions + Claude API 서버 구축 (Secret Manager 키 관리)</li>
-              <li>상향/하향 Counter-factual 시나리오 생성 LLM 프롬프트 파이프라인 설계</li>
+              <li>기존 과사용 개입 방식(알림, 사용 제한)은 사용자 반발이 커 지속 효과가 낮아, Counter-factual 시나리오를 LLM으로 생성하여 자발적 행동 변화를 유도</li>
+              <li>피실험자 8명 대상 2주간 대조군/실험군 비교 실험을 설계하고, 사용량 <strong>21% 감소</strong> 도출</li>
             </ul>
             <h5>Tech Stack<span class="period-mark">.</span></h5>
             <p>Flutter, Kotlin, Firebase, LLM, Claude API, Google Cloud</p>
